@@ -1,35 +1,249 @@
 <!DOCTYPE html>
-<head><title>register</title></head>
-
-<body bgcolor="grey">
-
-<script src="app/lib/angular-animate.js" defer></script>
 <html>
-<form action="insert.php"method="POST">
-  <div class="container">
-     <center><h1><b><i>DO YOU THINK YOU CAN REGISTER</i></b></h1></center>
-       <legend><marquee scroll="10"><h1><font color="aquA"size="80%"><b>WHATA ARE YOU WAITING!<i>HERE IS THE FORM</i></b></font></H1></marquee></legend>
-     <p>please fill in this form to create an account.</p>
-     <hr>
-     <label for="email"><b>Email</b></label>
-     <input type="text" placeholder="Enter mail" name="email" required><br>
-     
-     <label for="psw"><b>Password</b></label>
-     <input type="Paassword" placeholder="Enter Password" name="psw" required></br>
+<head>
+  <title>register</title>
+  <style type="text/css">
+  *{
+  margin:0;
+  padding:0;
+  }   
+  body{
+    background-image:url(file:///C:/Users/25576/Pictures/Saved%20Pictures/SharedScreenshot.jpg);
+    background-position:center; 
+    background-size:cover;
+    font-family:sans-serif;
+    margin-top:40px;
+    }
+    .regform{
+        width:800px;
+        background-color:rgb(0,0,0,0.6);
+        margin:auto;
+        color:#FFFFFF;
+        padding:10px 0px 10px 0px;
+        text-align:center;
+        border-radius:15px 15px 0px 0px;
+        }
+    .main{
+      background-color:rgb(0,0,0,0.5);
+      width:800px;
+      margin:auto;
+      }
+      .form{
+        padding:10px;
+        }
+        #name{
+        width:100%;
+        height:100px;
+        }
+        .name{
+        margin-left:25px;
+        margin-top:30px;
+        width:125px;
+        color:white;
+        font-size:18px;
+        font-weight:700px;
+        }
+    .firstname{
+          position:relative;
+          left:200px;
+          top:-37px;
+          line-height:40px;
+          border-radius:6px;
+          padding:0 22px;
+          font-size:16px;
+          }
+          .lastname{
+          position:relative;
+          left:417px;
+          top:-80px;
+          line-height:40px;
+          border-radius:6px;
+          padding:0 22px;
+          font-size:16px;
+          color:#555;
+          }
+      .firstlabel{
+            position:relative;
+            color:E5E5E5;
+            text-transform:capitalize;
+            font-size:14px;
+            left:492px;
+            top:-76px;
+            }
+            .lastlable{
+            position:relative;
+            color:E5E5E5;
+            text-transform:capitalize;
+            font-size:14px;
+            left:175px;
+            top:-45px;
+            
 
-     <label for="psw-repeat"><b>Repeat Password"</b></label><br>
-     <input type="password" placeholder="Repeat password" name="psw-repeat" required>
-     <hr>
+            }
+      .company{
+            position:relative;
+            left:200px;
+            top:-37px;
+            line-height:40px;
+            width:480px;
+            border-radius:6px;
+            padding:0 22px;
+            font-size:16px;
+            color:#555;
+            } 
+        .email{
+            position:relative;
+            left:200px;
+            top:-37px;
+            line-height:40px;
+            width:480px;
+            border-radius:6px;
+            padding:0 22px;
+            font-size:16px;
+            color:#555;
+            }
+      .Code{
+        position:relative;
+            left:200px;
+            top:-37px;
+            line-height:40px;
+            width:95px;
+            border-radius:6px;
+            padding:0 22px;
+            font-size:16px;
+            color:#555;
+        }
+      .number{
+          position:relative;
+            left:200px;
+            top:-37px;
+            line-height:40px;
+            width:255px;
+            border-radius:6px;
+            padding:0 22px;
+            font-size:16px;
+            color:#555;
+          }
+        .area-code{
+              position:relative;
+              color:E5E5E5;
+              text-transform:capitalize;
+              font-size:16px;
+              left:54px;
+              top:-4px;
+              }
+        .phone-number{
+                position:relative;
+              color:E5E5E5;
+              text-transform:capitalize;
+              font-size:16px;
+              left:-100px;
+              top:-2px;
+                }
+        .option{
+            position:relative;
+            left:200px;
+            top:-37px;
+            line-height:40px;
+            width:532px;
+            height:40px;
+            border-radius:6px;
+            padding:0 22px;
+            font-size:16px;
+            color:#555;
+            outline:none;
+            overflow:hidden;
+            } 
+        .option option{
+                font-size:20px;
 
-     <p>By creating n account you agree to our <a href="#">Terms & Privacy</a>.</p></br>
-   <button type="submit" class="registerbtn" color="aqua">Register</button>
-    </div>
+                }
+        #customer{
+            margin-left:25px;
+            color:white;
+            font-size:18px;
+              }
+        .radio{
+            display:inline-block;
+            padding-right:70px;
+            font-size:25px;
+            margin-left:25px;
+            margin-top:15px;
+            color:white;
+            }
+        .radio input{
+              width:20px;
+              height:20px;
+              border-radius:50%;
+              cursor:pointer;
+              outline:none;
+              }
+        button{
+            background-color:3BAF9F;
+            display:block;
+            margin:20px 0px 0px 20px;
+            text-align:center;
+            border-radius:12px;
+            border:2px solid #366473;
+            padding:14px 110px;
+            outline:none;
+            color:white;
+            cursor:pointer;
+            transition:0.25px;
+            } 
+        button;hover{
+              background-color:#5390F5;
+              }
+  </style>
+</head>
+<body>
+  <div class="regform"><h1> Registration Form</h1></div>
+  <div class="main">
+    <form>
+    <div id="name">
+    <h2 class="name">Name</h2>  
+    <input class="firstname" type="text" name="first_name"><br>
+    <label class="firstlabel">first name</label>
+    <input class="lastname" type="rext" name="last_name">
+      <label class="lastlabel">last name</label>
 
-   </form>
-      </div>
-      <div class="container signin">
-        <p>Already have an account? <a href="#">sign in</a>.</p>
-      </div>
-    </form>
-      </div>
-  </html>
+      <h2 class="name">Company</h2>
+      <input class="company" type="text" name="company">
+
+      <h2 class="name">Email</h2>
+      <input class="email" type="text" name="email">
+
+      <h2 class="name">Phone</h2>
+      <input class="code" type="text" name="area_code">
+      <label class="area-code">Area Code</label>
+      <input class="number" type="text" name="phone">
+      <label class="phone-number">Phone Number</label>
+
+      <h2 class="name">Subject</h2>
+      <select class="option" name="subject">
+        <option disabled="disabled" selected="selected">--Choose Option</option>
+        <option> Subject 1</option>
+        <option> Subject 2</option>
+        <option> Subject 3</option>
+      </select>
+
+      <h2 id="customer">Are you beginner ?</h2>
+
+      <label class="radio">
+      <input class="radio-one" type="radio" checked="checked" name="">  
+      <span class="checkmark"></span>
+      Yes
+      </label>
+
+      <label class="radio">
+      <input class="radio-two" type="radio" name="">  
+      <span class="checkmark"></span>
+      No
+      </label>
+
+      <button type="submit">Register</button>
+</div>
+</form>
+</div>
+<body>
+</html>     
