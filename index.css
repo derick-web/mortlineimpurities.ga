@@ -1,17 +1,20 @@
 
-*{
-  margin:0;
-  padding:0;
-  }   
+
+
+  body{
+    background-image: url(C:/Users/25576/Downloads/1.png);
+    font-family: cursive;
+    background-color: green;
+  }
   
 .sticky-topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: grey;
 }
 
 .sticky-topnav a {
   float: left;
-  display: block;
+  display: inline-flex;
   color: black;
   text-align: center;
   padding: 34px 36px;
@@ -19,6 +22,7 @@
   font-size: 25px;
   font-family: cursive;
   font-kerning:normal; 
+  align-content: space-between;
 }
 
 .sticky-topnav a:hover {
